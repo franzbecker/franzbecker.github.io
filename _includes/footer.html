@@ -53,7 +53,10 @@
                     </li>
                     {% endif %}
                 </ul>
-                <p class="copyright text-muted">Copyright &copy; {{ site.copyright_name }} {{ site.time | date: '%Y' }} | <a href="{{ "/imprint" | prepend: site.baseurl }}">Imprint</a></p>
+                <p class="copyright text-muted">Copyright &copy; {{ site.copyright_name }} {{ site.time | date: '%Y' }}
+                | <a href="{{ site.baseurl }}/">Home</a>
+                | <a href="{{ "/imprint" | prepend: site.baseurl }}">Imprint</a>
+                | <a href="{{ "/imprint/#privacy" | prepend: site.baseurl }}">Privacy Policy</a></p>
             </div>
         </div>
     </div>

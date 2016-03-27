@@ -12,7 +12,6 @@ layout: default
                     {% if page.subtitle %}
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     {% endif %}
-                    <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
                 </div>
             </div>
         </div>
@@ -28,6 +27,9 @@ layout: default
 				{{ content }}
 
                 <hr>
+                <span class="small">
+                    Posted on {{ page.date | date: "%B %-d, %Y" }}
+                </span>
 
                 <ul class="pager">
                     {% if page.previous.url %}
@@ -41,6 +43,24 @@ layout: default
                     </li>
                     {% endif %}
                 </ul>
+
+                <!-- Comments -->
+                <br/>
+                <div id="disqus_thread"></div>
+                <script>
+                    var disqus_config = function() {
+                        this.page.url = "http://blog.franzbecker.io{{page.id}}"
+                        this.page.identifier = "{{page.id}}"
+                    };
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                        var d = document,
+                            s = d.createElement('script');
+                        s.src = '//franzbecker.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
             </div>
         </div>
