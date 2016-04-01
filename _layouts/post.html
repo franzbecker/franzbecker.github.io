@@ -2,8 +2,24 @@
 layout: default
 ---
 
+<style scoped>
+    {% if page.header-img %}
+    /* show the post's header image */
+    .intro-header {
+        background-image: url('{{ site.baseurl }}/{{ page.header-img }}');
+    }
+    {% else %}
+    /* post doesn't have a specific header image, show the site header only on bigger screens */
+    @media only screen and (min-width: 768px) {
+        .intro-header {
+            background-image: url('{{ site.baseurl }}/{{ site.header-img }}');
+        }
+    }
+    {% endif %}
+</style>
+
 <!-- Post Header -->
-<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
