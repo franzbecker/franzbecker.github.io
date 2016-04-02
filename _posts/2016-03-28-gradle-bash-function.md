@@ -7,7 +7,7 @@ tags: ["gradle", "bash"]
 When using Gradle (or Maven) in your project it is convenient to define bash aliases or functions for reoccurring tasks. For Maven this is pretty straightforward, simply put something like
 
 ```bash
-    alias b='mvn clean install'
+alias b='mvn clean install'
 ```
 
 in your bash profile (`~/.profile`) and you can simply enter `b` in your console instead of typing `mvn clean install` over and over again.
@@ -17,8 +17,8 @@ With Gradle the story is a bit different as you're supposed to use the Gradle [w
 So the first attempt would be to do something like this:
 
 ```bash
-    alias g='./gradlew $@'
-    alias b='g build'
+alias g='./gradlew $@'
+alias b='g build'
 ```
 
 This is ok for most situations and lets you type `b` or `g build` instead of `./gradlew build` in your console.
@@ -52,16 +52,17 @@ Note that I built in a confirmation in case there is no `build.gradle` in the cu
 If you want to use this script here's an example setup:
 
 ```bash
-    mkdir -p ~/.bash \
-    && curl -L -s https://git.io/vVfXi > ~/.bash/gradle.bash \
-    && echo "source ~/.bash/gradle.bash" >> ~/.profile \
-    && cat ~/.bash/gradle.bash # verify the downloaded script
+mkdir -p ~/.bash \
+&& curl -L -s https://git.io/vVfXi > ~/.bash/gradle.bash \
+&& echo "source ~/.bash/gradle.bash" >> ~/.profile \
+&& cat ~/.bash/gradle.bash # verify the downloaded script
 
-    source ~/.profile # reload profile for current bash
+source ~/.profile # reload profile for current bash
 ```
 
+
 ## Alternatives
-There are quite few scripts out there, also with auto completion. I like the one from Nolan Lawson, which can be found here: [https://gist.github.com/nolanlawson/8694399](). On my Mac it worked fine after installing `md5sum` (`brew install md5sha1sum`).
+There are quite few scripts out there, also with auto completion. I like the one from Nolan Lawson, which can be found here: [https://git.io/vV8sj](https://git.io/vV8sj). On my Mac it worked fine after installing `md5sum` (`brew install md5sha1sum`).
 
 Simply add `complete -F _gradle g` to the end of it and it works nicely with the `g()` function from above.
 
