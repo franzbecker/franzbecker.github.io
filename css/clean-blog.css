@@ -47,6 +47,7 @@ a img:focus {
   cursor: zoom-in;
 }
 blockquote {
+  padding: 0px 15px;
   color: #808080;
   font-style: italic;
 }
