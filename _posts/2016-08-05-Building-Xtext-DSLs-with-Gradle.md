@@ -82,7 +82,9 @@ The script will automatically download the configured Gradle distribution and ex
 
 At the root level `gradlew` and `gradlew.bat` are the scripts that are platform dependent and run the Gradle Wrapper that resides in the `gradle-wrapper.jar`. The `gradle-wrapper.properties` configures the Gradle distribution that is used e.g. the version. You can find more information [here](https://docs.gradle.org/current/userguide/gradle_wrapper.html).
 
-Pro tip: Instead of typing `./gradlew` all the time try defining a bash function as explained [here](http://blog.franzbecker.io/2016/03/28/gradle-bash-function/).
+Pro tip 1) Instead of typing `./gradlew` all the time try defining a bash function as explained [here](http://blog.franzbecker.io/2016/03/28/gradle-bash-function/).
+
+Pro tip 2) If you're on Windows please help your colleagues and CI system by adding the executable flag to `gradlew` by calling `git update-index --chmod=+x gradlew`
 
 ## Gradle build scripts
 
