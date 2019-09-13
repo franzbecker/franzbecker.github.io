@@ -7,7 +7,7 @@ The MIT License (MIT)
 =====================
 
 Copyright for portions of this project are held by Blackrock Digital LLC (2013 - 2016) as part of project [startbootstrap-clean-blog](https://github.com/BlackrockDigital/startbootstrap-clean-blog).
-All other copyright for this project are held by Franz Becker (2016).
+All other copyright for this project are held by Franz Becker (2016 - 2019).
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
