@@ -11,8 +11,7 @@ Franz Becker<br/>
 Falkenried 95<br/>
 20251 Hamburg<br/>
 
-email: blog@franzbecker.io<br/>
-url: http://www.franzbecker.io<br/>
+url: https://franzbecker.github.io<br/>
 
 
 Person responsible for content in accordance with 55 Abs. 2 RStV:<br/>
